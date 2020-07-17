@@ -7,17 +7,18 @@
   },
   "bugs": "https://github.com/cleanunicorn/op-scanner/issues",
   "dependencies": {
-    "@oclif/command": "^1.5.11",
-    "@oclif/config": "^1.12.9",
-    "@oclif/plugin-help": "^2.1.6",
-    "cli-ux": "^5.2.0",
-    "request": "^2.88.0",
-    "request-promise": "^4.2.4"
+    "@oclif/command": "^1.7.0",
+    "@oclif/config": "^1.16.0",
+    "@oclif/plugin-help": "^2.2.3",
+    "cli-ux": "^5.4.9",
+    "fs-extra-debug": "^1.0.4",
+    "request": "^2.88.2",
+    "request-promise": "^4.2.5"
   },
   "devDependencies": {
-    "@oclif/test": "^1.2.4",
+    "@oclif/test": "^1.2.6",
     "chai": "^4.2.0",
-    "eslint": "^5.14.1",
+    "eslint": "^5.16.0",
     "eslint-config-oclif": "^3.1.0",
     "mocha": "^5.2.0",
     "nyc": "^13.3.0"
