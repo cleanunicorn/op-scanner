@@ -59,15 +59,15 @@ class OpScannerCommand extends Command {
   async findOperation(disas, func, operation) {
     for (let f in disas.functions) {
       if (disas.functions[f].name.startsWith(func)) {
-        return await this.findInTrace(disas.functions[f].trace)
+        return await this.findInTrace(disas.functions[f].trace, operation)
       }
     }
     return false
   }
 
-  async findInTrace(trace) {
+  async findInTrace(trace, operation) {
     for (let t in trace) {
-      if (await this.recursiveFindInTrace(trace[t]) === true) {
+      if (await this.recursiveFindInTrace(trace[t], operation) === true) {
         return true
       }
     }
@@ -75,9 +75,9 @@ class OpScannerCommand extends Command {
     return false
   }
 
-  async recursiveFindInTrace(trace) {
+  async recursiveFindInTrace(trace, operation) {
     for (let t in trace) {
-      if (trace[t] === 'CALL') {
+      if (trace[t] === operation) {
         return true
       }
 
